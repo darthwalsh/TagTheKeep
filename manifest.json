@@ -1,6 +1,6 @@
 {
   "manifest_version": 2,
-  
+
   "version": "0.1.0",
   
   "name": "Tag the Keep",
@@ -11,6 +11,20 @@
     "48": "icons/icon48.png",
     "128": "icons/icon128.png"
   },
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "page_action": {
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "24": "icons/icon16.png",
+      "32": "icons/icon16.png"
+    }
+  },
   "default_locale": "en",
-  "permissions": ["activeTab"]
+  "permissions": [
+    "activeTab",
+    "declarativeContent"
+  ]
 }
