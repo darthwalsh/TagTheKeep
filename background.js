@@ -14,5 +14,5 @@ chrome.runtime.onInstalled.addListener(() => {
 });
 
 chrome.pageAction.onClicked.addListener(tab => {
-  chrome.tabs.executeScript(tab.id, {code: "console.log(10)"});
+  chrome.tabs.executeScript(tab.id, {file: "filter.js"});
 })
