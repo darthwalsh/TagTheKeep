@@ -2,7 +2,7 @@
 
 Do you wish Google Keep gave you the option to search for un-labled notes, [like][1] [these][2] [requests][3]?
 
-You can use this script to create the label `NO_LABEL` which allows you to easily find all unlabed notes. Each time you run it, it will loop through all your notes and assign the `NO_LABEL` label for all un-labeled notes, and remove the `NO_LABEL` label if there is also another label.
+You can use this script to create the label `NO_LABEL` which allows you to easily find all un-labed notes. Each time you run it, it will loop through all your notes and assign the `NO_LABEL` label for all un-labeled notes, and remove the `NO_LABEL` label if there is also another label.
 
 ## How to use
 
@@ -12,7 +12,7 @@ You can use this script to create the label `NO_LABEL` which allows you to easil
 
     python3 main.py -u sally
 
-Visit https://keep.google.com/#label/NO_LABEL and label everything
+Visit https://keep.google.com/#label/NO_LABEL and add labels or archive notes. No need to remove `NO_LABEL`, just run again:
 
     python3 main.py -u sally
 
@@ -33,6 +33,8 @@ optional arguments:
                         Google account email
   -l LABEL, --label LABEL
                         Label to use for unlabeled notes. Default: 'NO_LABEL'
+  -a, --include_archived
+                        include all notes, instead of notes not archived
 
 If your account uses 2FA, use a App Password
 ```
@@ -43,7 +45,7 @@ So if your email is sally@gmail.com, then run:
 
 and at the prompt type your account password.
 
-After the first time you run it, a `.token` file is created that contains an auth token so future runs to not need a password. Delete this if you are worried about security.
+After the first time you run it, a `.token` file is created that contains an auth token that gives permission to your entire Google account, so future runs to not need a password. Delete this if you are worried about security.
 
 ## 2FA needs App Password
 
