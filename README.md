@@ -8,7 +8,9 @@ You can use this script to create the label `NO_LABEL` which allows you to easil
 
     git clone https://github.com/darthwalsh/TagTheKeep.git
     cd TagTheKeep
-    python3 -m pip install gkeepapi
+    python3 -m venv env
+    . ./env/bin/Activate.ps1
+    python3 -m pip install -r requirements.txt
 
     python3 main.py -u sally
 
