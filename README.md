@@ -12,7 +12,7 @@ You can use this script to create the label `NO_LABEL` which allows you to easil
     . ./env/bin/Activate.ps1
     python3 -m pip install -r requirements.txt
 
-    python3 main.py -u sally
+    python3 main.py
 
 Visit https://keep.google.com/#label/NO_LABEL and add labels or archive notes. No need to remove `NO_LABEL`, just run again:
 
@@ -41,13 +41,13 @@ optional arguments:
 If your account uses 2FA, use a App Password
 ```
 
-So if your email is sally@gmail.com, then run:
+If your email is `sally@gmail.com`, then run:
 
     python3 main.py -u sally
 
 and at the prompt type your account password.
 
-After the first time you run it, a `.token` file is created that contains an auth token that gives permission to your entire Google account, so future runs to not need a password. Delete this if you are worried about security.
+After the first time you run it, a `.token` file is created that contains an auth token that gives permission to your entire Google account, so future runs do not need a password. Delete this if you are worried about malicous apps on your computer.
 
 ## 2FA needs App Password
 
